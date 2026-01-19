@@ -1,0 +1,149 @@
+
+.carousel {
+  height: 40vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 800px;
+  margin: auto;
+}
+
+.carousel_item {
+  position: relative;
+  cursor: pointer;
+  text-align: center;
+  margin: 0 15px;
+  opacity: 0.5;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+.carousel_item img {
+  width: 150px;
+  border-radius: 10px;
+}
+
+.carousel_item h3 {
+  position: absolute;
+  top: 105%;
+  width: 100%;
+  color: #fff;
+  font-size: 14px;
+}
+
+.carousel_item:nth-child(2) {
+  transform: scale(1.2);
+  opacity: 1;
+}
+
+
+.buttonBack {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+}
+
+.buttonBack button {
+  box-shadow: 0 0 20px #1db954;
+  border: none;
+  background-color: #1db954;
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all .3s;
+}
+
+.buttonBack button:hover {
+  box-shadow: 0 0 30px #1db954;
+  background-color: #1ed760;
+  padding: 8px 14px;
+}
+
+
+.titlePrev {
+  margin: 30px 0 15px;
+  text-align: center;
+  font-size: 18px;
+  color: #fff;
+}
+
+.trackList {
+  max-width: 720px;
+  margin: 0 auto 60px;
+  display: flex;
+  flex-direction: column;
+}
+
+.trackItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  height: 56px;
+  padding: 6px 12px;
+
+  border-radius: 6px;
+  cursor: pointer;
+
+  transition: background 0.15s ease;
+}
+
+.trackItem:hover {
+  background-color: #1a1a1a;
+}
+
+.active {
+  background-color: #1db954;
+}
+
+.active .trackTitle,
+.active .trackArtist {
+  color: #000;
+}
+
+.trackImage {
+  width: 40px;
+  height: 40px;
+  border-radius: 4px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.trackInfo {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  overflow: hidden;
+}
+
+.trackTitle {
+  font-size: 14px;
+  font-weight: 500;
+  color: #fff;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.trackArtist {
+  font-size: 12px;
+  color: #9a9a9a;
+}
+
+.iconContainer {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background-color: #000;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #fff;
+  flex-shrink: 0;
+}
+
+.active .iconContainer {
+  background-color: #000;
+}
