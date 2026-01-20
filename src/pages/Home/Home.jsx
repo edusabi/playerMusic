@@ -14,7 +14,7 @@ const Home = () => {
     e.preventDefault();
 
     try {
-      const response = await axios.post("http://localhost:3000/busca", { name });
+      const response = await axios.post("https://playermusic.discloud.app/busca", { name });
       const artist = response.data.data[0];
 
       setDadosArtista(artist);
