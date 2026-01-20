@@ -18,7 +18,7 @@ const AboutArtist = () => {
 
   // Função para buscar os álbuns do artista
   const getDataArtist = async () => {
-    const response = await axios.get(`http://localhost:3000/api/artista`, {
+    const response = await axios.get(`https://playermusic.discloud.app/api/artista`, {
       params: { idArtista },
     });
     const albums = response.data.data;
@@ -32,7 +32,7 @@ const AboutArtist = () => {
 
   // Função para buscar a tracklist do álbum selecionado
   const getDataTrackList = async (albumId) => {
-    const response = await axios.get(`http://localhost:3000/tracklist`, {
+    const response = await axios.get(`https://playermusic.discloud.app/tracklist`, {
       params: { idArtista: albumId },
     });
     setDataTracklist(response.data.data);
